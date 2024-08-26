@@ -2,15 +2,18 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
 
 public class BrowserFactory {
    private static WebDriver driver;
 
+   @BeforeTest
     public WebDriver startApp(String browser, String url){
         if(browser.equalsIgnoreCase("chrome")){
             driver = new ChromeDriver();
@@ -18,9 +21,13 @@ public class BrowserFactory {
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
             driver = new SafariDriver();
-        }
+        } /*else if (browser.equalsIgnoreCase("chromium")) {
+            driver = new ChromiumDriver();
+        }*/
+
         else {
             driver = new EdgeDriver();
+
         }
 
         driver.get(url);
