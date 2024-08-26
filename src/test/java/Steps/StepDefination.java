@@ -18,22 +18,26 @@ public class StepDefination {
 
     }
 
+    @When("navigation bar is displayed")
+    public void navigationBarIsDisplayed() {
+    }
 
     @Then("click login on navigation bar")
     public void clickLoginOnNavigationBar() {
     }
 
-    @And("enter username <username>")
-    public void enterUsernameUsername() {
+     @And("^user enters username username(.)$")
+    public void userEntersUsernameUsername() {
     }
 
-    @And("enter password <password>")
-    public void enterPasswordPassword() {
+    @And("^user enters password password(.)$")
+    public void userEntersPasswordPassword() {
     }
 
     @Then("click login button")
     public void clickLoginButton() {
     }
+/*
 
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
@@ -74,5 +78,7 @@ public class StepDefination {
     @Then("an error message indicating the password is required should be displayed")
     public void anErrorMessageIndicatingThePasswordIsRequiredShouldBeDisplayed() {
     }
+*/
+
 
 }
