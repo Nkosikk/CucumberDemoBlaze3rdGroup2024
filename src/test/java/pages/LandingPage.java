@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LandingPage extends BasePage {
+public class LandingPage  {
 
     @FindBy(xpath = "//a[@id='login2']")
     WebElement _navLogin;
@@ -45,24 +45,34 @@ public class LandingPage extends BasePage {
     @FindBy(xpath = "//h3[contains(@id,'totalp')]")
     WebElement total;
 
-    @FindBy(xpath = "//input[@id='name']") WebElement placeOrderName;
+    @FindBy(xpath = "//input[@id='name']")
+    WebElement placeOrderName;
 
-    @FindBy(xpath = "//input[contains(@id,'country')]") WebElement placeOrderCountry;
+    @FindBy(xpath = "//input[contains(@id,'country')]")
+    WebElement placeOrderCountry;
 
-    @FindBy(xpath = "//input[contains(@id,'country')]") WebElement placeOrderCity;
+    @FindBy(xpath = "//input[contains(@id,'country')]")
+    WebElement placeOrderCity;
 
-    @FindBy(xpath = "//input[contains(@id,'card')]") WebElement userCreditCard;
+    @FindBy(xpath = "//input[contains(@id,'card')]")
+    WebElement userCreditCard;
 
-    @FindBy(xpath = "//input[contains(@id,'month')]") WebElement cardExpiryMonth;
+    @FindBy(xpath = "//input[contains(@id,'month')]")
+    WebElement cardExpiryMonth;
 
-    @FindBy(xpath = "//input[contains(@id,'year')]") WebElement cardExpiryYear;
+    @FindBy(xpath = "//input[contains(@id,'year')]")
+    WebElement cardExpiryYear;
 
-    @FindBy(xpath = "(//button[@type='button'][contains(.,'Close')])[3]") WebElement closePlaceOrderModal;
+    @FindBy(xpath = "(//button[@type='button'][contains(.,'Close')])[3]")
+    WebElement closePlaceOrderModal;
 
-    @FindBy(xpath = "//button[@type='button'][contains(.,'Purchase')]") WebElement purchaseButton;
+    @FindBy(xpath = "//button[@type='button'][contains(.,'Purchase')]")
+    WebElement purchaseButton;
 
-    @FindBy(xpath = "//h2[contains(.,'Thank you for your purchase!')]") WebElement ThankYouMessage;
+    @FindBy(xpath = "//h2[contains(.,'Thank you for your purchase!')]")
+    WebElement ThankYouMessage;
 
-    @FindBy(xpath = "//button[@class='confirm btn btn-lg btn-primary'][contains(.,'OK')]") WebElement okButton;
+    @FindBy(xpath = "//button[@class='confirm btn btn-lg btn-primary'][contains(.,'OK')]")
+    WebElement okButton;
 
 }
