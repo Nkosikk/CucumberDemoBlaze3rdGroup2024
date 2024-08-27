@@ -9,30 +9,29 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.time.Duration;
 
 public class BrowserFactory {
-   private static WebDriver driver;
+    private static WebDriver driver;
 
-    public WebDriver startApp(String browser, String url){
-        if(browser.equalsIgnoreCase("chrome")){
+    public WebDriver startApp(String browser, String url) {
+        if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox") || browser.equalsIgnoreCase("mozilla")) {
             driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("safari")) {
             driver = new SafariDriver();
-        }
-        else {
+        } else {
             driver = new EdgeDriver();
         }
 
         driver.get(url);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-        return  driver;
+        return driver;
     }
 
-    public static void quitApp(){
-        if(driver!=null){
-            driver.quit();
-        }
-    }
+//    public static void quitApp() {
+//        if (driver != null) {
+//            driver.quit();
+//        }
+//    }
 
 }
