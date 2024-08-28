@@ -10,35 +10,45 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class LandingPage {
+public class LandingPagePopUp {
 
     WebDriver driver;
 
-    @FindBy(xpath = "//a[contains(@id,'login2')]")
-    WebElement loginBtn_xpath;
+    @FindBy(xpath = "//input[contains(@id,'loginusername')]")
+    WebElement loginUsername_xpath;
+
+    @FindBy(xpath = "//input[contains(@id,'loginpassword')]")
+    WebElement loginPassword_xpath;
+
+    @FindBy(xpath = "//button[@type='button'][contains(.,'Log in')]")
+    WebElement loginBtnPopUp_xpath;
+
 
     @FindBy(id = "logInModalLabel")
     WebElement logInModalLabel_xpath;
 
-    @FindBy(xpath = "//a[contains(@id,'logout2')]")
-    WebElement logout2Button_xpath;
-
-    public LandingPage(WebDriver driver) {
+    public LandingPagePopUp(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    public void clickLoginButton() {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(loginBtn_xpath));
-        loginBtn_xpath.click();
+
+    public void enterUserName(String name) {
+        loginUsername_xpath.sendKeys(name);
     }
+
+    public void enterUserPassword(String password) {
+        loginPassword_xpath.sendKeys(password);
+    }
+
+
+    public void clickLoginPopUpButton() {
+        loginBtnPopUp_xpath.click();
+    }
+
 
     public void verifyThePopUpIsDisplayed() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(logInModalLabel_xpath));
         Assert.assertEquals(logInModalLabel_xpath.getText(), "Log in");
-    }
-
-    public void verifyThatUserIsLoggedIn() {
-        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(logout2Button_xpath));
     }
 }
