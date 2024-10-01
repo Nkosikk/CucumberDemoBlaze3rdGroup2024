@@ -21,7 +21,7 @@ public class StepDef {
 
     @Given("Landing page is displayed")
     public void landing_page_is_displayed() {
-        driver = browserFactory.startApp("edge", "https://www.demoblaze.com/index.html");
+        driver = browserFactory.startApp("chrome", "https://www.demoblaze.com/index.html");
         landingPage = new LandingPage(driver);
         landingPagePopUp = new LandingPagePopUp(driver);
     }
