@@ -8,6 +8,7 @@ Feature: Landing Page
     And I enter the username admin
     And I enter the password admin
     And I click on the Log in  on the pop up
+    And Verify the I am logged in
     And I click on the Cart button
     Then I empty the Cart
     And I click on the home page

@@ -23,7 +23,6 @@ public class PlaceOrderPage {
     String month = "May";
     String year ="1957";
 
-
     @FindBy(xpath = "//input[@id='name']")
     WebElement name_xpath;
 
@@ -45,13 +44,10 @@ public class PlaceOrderPage {
     @FindBy(xpath = "//button[@type='button'][contains(.,'Purchase')]")
     WebElement purchase_xpath;
 
-
-
     public PlaceOrderPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
 
     public void enterUserName(){
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(name_xpath));

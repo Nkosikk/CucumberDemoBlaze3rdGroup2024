@@ -23,7 +23,6 @@ public class LandingPagePopUp {
     @FindBy(xpath = "//button[@type='button'][contains(.,'Log in')]")
     WebElement loginBtnPopUp_xpath;
 
-
     @FindBy(id = "logInModalLabel")
     WebElement logInModalLabel_xpath;
 
@@ -31,7 +30,6 @@ public class LandingPagePopUp {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
 
     public void enterUserName(String name) {
         loginUsername_xpath.sendKeys(name);
@@ -45,7 +43,6 @@ public class LandingPagePopUp {
     public void clickLoginPopUpButton() {
         loginBtnPopUp_xpath.click();
     }
-
 
     public void verifyThePopUpIsDisplayed() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(logInModalLabel_xpath));

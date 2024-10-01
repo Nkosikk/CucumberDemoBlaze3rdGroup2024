@@ -28,10 +28,10 @@ public class BrowserFactory {
         return driver;
     }
 
-//    public static void quitApp() {
-//        if (driver != null) {
-//            driver.quit();
-//        }
-//    }
+    public static void quitApp() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
 }

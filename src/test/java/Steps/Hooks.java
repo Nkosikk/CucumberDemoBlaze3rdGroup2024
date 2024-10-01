@@ -5,9 +5,9 @@ import utils.BrowserFactory;
 
 public class Hooks {
 
-    //BrowserFactory browserFactory = new BrowserFactory();
-////    public void tearDown(){
-//        BrowserFactory.quitApp();
-//    }
+    BrowserFactory browserFactory = new BrowserFactory();
+    public void tearDown() {
+        BrowserFactory.quitApp();
+    }
 
 }

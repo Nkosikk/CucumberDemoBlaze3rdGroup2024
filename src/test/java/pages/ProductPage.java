@@ -21,7 +21,6 @@ public class ProductPage {
         PageFactory.initElements(driver,this);
 
     }
-
     public void clickAddToCart() throws InterruptedException {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(addToCart_xpath));
         addToCart_xpath.click();

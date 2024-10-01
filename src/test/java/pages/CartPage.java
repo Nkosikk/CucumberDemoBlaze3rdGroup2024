@@ -34,8 +34,6 @@ public class CartPage {
     }
 
     public void emptyCart() throws InterruptedException {
-        // boolean cartNotEmpty = true;
-
 
         int i = allElements.size();
 
@@ -46,29 +44,6 @@ public class CartPage {
                 productToDelete_xpath.click();
             }
         }
-
-
-//        do {
-//            //Thread.sleep(5000);
-//
-//            int attempts = 0;
-//            while (attempts < 2) {
-//                try {
-//                    WebElement orderTotal_xpath = driver.findElement(By.xpath("//h3[contains(@id,'totalp')]"));
-//                    break; // Break the loop if successful
-//                } catch (StaleElementReferenceException e) {
-//                    attempts++;
-//                }
-//            }
-//
-//            String orderTotal = orderTotal_xpath.getText(); // Store the text in a variable
-//
-//            if (orderTotal.isEmpty()) {
-//                cartNotEmpty = false;// Exit the loop if the cart is empty
-//            } else {
-//                productToDelete_xpath.click();
-//            }
-//        } while (cartNotEmpty);  // Continue looping while the cart is not empty
     }
 
     public void clickCartUlrButton() throws InterruptedException {

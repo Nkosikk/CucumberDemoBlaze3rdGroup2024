@@ -33,12 +33,14 @@ public class LandingPage {
         loginBtn_xpath.click();
     }
 
-    public void clickHomePageNavLink(){
+    public void clickHomePageNavLink() {
         homePageNavLink_xpath.click();
     }
 
-
     public void verifyThatUserIsLoggedIn() {
         new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(logout2Button_xpath));
+        Assert.assertEquals(logout2Button_xpath.getText(),"Log out");
     }
 }
+
+

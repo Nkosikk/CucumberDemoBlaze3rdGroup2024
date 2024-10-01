@@ -134,4 +134,9 @@ public class StepDef {
     public void iClickThePurchaseButton() {
         placeOrderPage.clickPurchase();
     }
+
+    @And("Verify the I am logged in")
+    public void verifyTheIAmLoggedIn() {
+        landingPage.verifyThatUserIsLoggedIn();
+    }
 }
