@@ -18,7 +18,7 @@ public class StepDef {
     CartPage cartPage;
     ProductPage productPage;
     PlaceOrderPage placeOrderPage;
-    // testing pipeline execution using Zinhle as a branch
+    // testing pipeline execution using Zinhle as a branch again
 
     @Given("Landing page is displayed")
     public void landing_page_is_displayed() {
